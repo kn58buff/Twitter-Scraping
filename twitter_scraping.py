@@ -60,14 +60,16 @@ def tweets_to_df(tweets, to_csv = "True"):
     df = pd.DataFrame(tweets)
 
     if to_csv == "True":
-        df.to_csv("leader_tweets.csv", index=False)
+        df.to_csv("data/state_dept.csv", index=False)
         return df
     elif to_csv == "False":
         return df
 
 headers = create_headers()
-keywords = "from: ForeignOfficeKE"
-start = "2012-01-01T00:00:00.000Z"
+keywords = "from: StateDept"
+start = "2006-03-21T00:00:00.000Z"
 max_results = 500
 
 tweets = scrape(keywords, start, max_results)
+#%%
+tweets_to_df(tweets)
