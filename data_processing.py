@@ -12,7 +12,7 @@ pd.set_option('display.max_colwidth', None)
 
 # Read in tweets and look at first 5 rows
 # Step 1 - clean raw data
-data = pd.read_csv("data/leader_tweets_kenya.csv")
+data = pd.read_csv("data/raw_tweets/leader_tweets_kenya.csv")
 data.head()
 
 # Remove any tweets that are retweets
@@ -33,7 +33,7 @@ data.loc[:, "Text"] = no_links
 
 # Save cleaned data to new csv file
 data.to_csv("data/leader_tweets_kenya_clean.csv", index=False)
-new_data = pd.read_csv("data/leader_tweets_kenya_clean.csv")
+new_data = pd.read_csv("data/raw_tweets/leader_tweets_kenya_clean.csv")
 
 print(f"STEP 1 : Successfully cleaned raw data and exported to new csv file.\n")
 print(f"--- STEP 2 beginning ---")
@@ -82,14 +82,14 @@ target_dataset = pd.DataFrame(target_tweets, columns=["Date", "Text"])
 #%%
 
 # Uncomment to reload data
-data = pd.read_csv("data/target_data.csv")
+data = pd.read_csv("data/raw_tweets/target_data.csv")
 data = data.reset_index()
 
 #%%
 
 # Function to obtain a n-random sample of the tweets
 def sample_data(n):
-    data = pd.read_csv("data/target_data.csv")
+    data = pd.read_csv("data/raw_tweets/target_data.csv")
     data = data.reset_index()
     sample = pd.DataFrame(columns = ["Date", "Text"])
     for k in range(n):
