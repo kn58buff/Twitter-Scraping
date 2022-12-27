@@ -89,16 +89,16 @@ data = data.reset_index()
 
 # Function to obtain a n-random sample of the tweets
 def sample_data(n):
-    sample = []
-
-    for date, tweet in zip(data["Date"], data["Text"]):
-        seed = r.random()
-        if seed >= 0.80 and len(sample) <= n:
-            sample.append([date, tweet])
-
-    sample = pd.DataFrame(sample).to_csv(f"data/sampled_tweets{n}.csv", index=False)
+    data = pd.read_csv("data/target_data.csv")
+    data = data.reset_index()
+    sample = pd.DataFrame(columns = ["Date", "Text"])
+    for k in range(n):
+        data = data.sample(frac = 1)
+        sample = sample.append(data.iloc[:1])
+    sample = sample.reset_index()
+    sample.drop(["level_0", "index"], axis=1, inplace=True)
+    sample.to_csv(f"data/sampled_tweets{n}.csv", index=False)
     return f"Successfully sampled {n} tweets"
-
 
 sample_data(200)
 print(f"STEP 2 : Found tweets mentioning countries and took a random sample")
