@@ -73,3 +73,18 @@ for k in range(len(classifiers_to_test)):
     pp.dump(current_classifier, open(f"data/model_training/200_samples/{current_classifier}.pickle", "wb"))
     pp.dump(vectorize_text, open(f"data/model_training/200_samples/{current_vectorizer}.pickle", "wb"))
     print(f"Finished scoring {current_classifier} and {current_vectorizer}")
+
+"""
+Function to categorize a tweet using a vectorizer and classifier
+def predict(message, vectorizer, classifier):
+    vectorize_message = vectorizer.transform([message])
+    predict = classifier.predict(vectorize_message)[0]
+    return predict
+"""
+
+"""Categorize all tweets of the data set
+preds_arr = []
+for msg in complete_data.Text:
+    res = predict(msg, current_vectorizer, current_classifier)
+    preds_arr.append([msg, res])
+"""
