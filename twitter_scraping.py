@@ -6,7 +6,7 @@ import pandas as pd
 
 # Function to create requests header
 def create_headers():
-    bearer_token = "AAAAAAAAAAAAAAAAAAAAAIrWbQEAAAAAXwp0%2F%2Bkbp09Qtft0AEadHgI6InU%3DeZTemF0dCGUMx9pbVmxfXhitdlK00YxRSeJjM34ablggBC1UMm"
+    bearer_token = "REPLACE WITH OWN"
     headers = {"Authorization": "Bearer {}".format(bearer_token)}
     return headers
 
