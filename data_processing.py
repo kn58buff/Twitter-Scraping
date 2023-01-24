@@ -32,7 +32,7 @@ for tweet in data.loc[:, "Text"]:
 data.loc[:, "Text"] = no_links
 
 # Save cleaned data to new csv file
-data.to_csv("data/leader_tweets_kenya_clean.csv", index=False)
+#data.to_csv("data/raw_tweets/leader_tweets_kenya_clean.csv", index=False)
 new_data = pd.read_csv("data/raw_tweets/leader_tweets_kenya_clean.csv")
 
 print(f"STEP 1 : Successfully cleaned raw data and exported to new csv file.\n")
@@ -88,17 +88,40 @@ data = data.reset_index()
 #%%
 
 # Function to obtain a n-random sample of the tweets
-def sample_data(n):
-    data = pd.read_csv("data/raw_tweets/target_data.csv")
-    data = data.reset_index()
+def sample_data(df, n):
+    df = df.reset_index()
     sample = pd.DataFrame(columns = ["Date", "Text"])
     for k in range(n):
-        data = data.sample(frac = 1)
-        sample = sample.append(data.iloc[:1])
-    sample = sample.reset_index()
-    sample.drop(["level_0", "index"], axis=1, inplace=True)
+        df = df.sample(frac = 1)
+        sample = sample.append(df.iloc[:1])
+    #sample = sample.reset_index()
+    #sample.drop(["level_0", "index"], axis=1, inplace=True)
     sample.to_csv(f"data/sampled_tweets{n}.csv", index=False)
     return f"Successfully sampled {n} tweets"
 
-sample_data(200)
-print(f"STEP 2 : Found tweets mentioning countries and took a random sample")
+#sample_data(pd.read_csv("data/raw_tweets/target_data.csv"), 200)
+#print(f"STEP 2 : Found tweets mentioning countries and took a random sample")
+
+# Obtain unique new samples
+def sample_unique(main_data, sampled_data, n):
+    main_data = main_data.reset_index()
+    sampled_data = sampled_data.reset_index()
+    new_data = pd.concat([main_data, sampled_data]).drop_duplicates().reset_index(drop=True)
+
+    sample_data(new_data, n)
+    return f"Successfully sampled {n} new unique tweets"
+
+#sample_unique(pd.read_csv("data/raw_tweets/target_data.csv"), pd.read_csv("data/sampled_tweets/sampled_tweets200.csv"), 100)
+
+#print(f"STEP 3 : Sampled a new 100 tweets")
+
+# Concatenate two samples
+two_hundred = pd.read_csv("data/sampled_tweets/sampled_tweets200_categorized.csv")
+one_hundred = pd.read_csv("data/sampled_tweets/sampled_tweets100_categorized.csv")
+
+three_hundred = pd.concat([two_hundred, one_hundred]).reset_index(drop=True)
+three_hundred.to_csv("data/sampled_tweets/sampled_tweets300_categorized.csv", index=False)
+
+print(f"STEP 4 : Combined two samples successfully")
+
+
