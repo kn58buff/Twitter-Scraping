@@ -15,12 +15,12 @@ data = pd.read_csv("data/raw_tweets/target_data.csv")
 data = data.reset_index()
 
 # load training data and split
-train = pd.read_csv("data/sampled_tweets/sampled_tweets200_categorized.csv")
+train = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets200_categorized.csv")
 train_x = train["Text"]
 train_y = train["Category"]
 
 # load test data
-test = pd.read_csv("data/sampled_tweets/sampled_tweets100_categorized.csv")
+test = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets100_categorized.csv")
 test_x = test["Text"]
 test_y = test["Category"]
 

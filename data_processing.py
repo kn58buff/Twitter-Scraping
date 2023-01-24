@@ -116,8 +116,8 @@ def sample_unique(main_data, sampled_data, n):
 #print(f"STEP 3 : Sampled a new 100 tweets")
 
 # Concatenate two samples
-two_hundred = pd.read_csv("data/sampled_tweets/sampled_tweets200_categorized.csv")
-one_hundred = pd.read_csv("data/sampled_tweets/sampled_tweets100_categorized.csv")
+two_hundred = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets200_categorized.csv")
+one_hundred = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets100_categorized.csv")
 
 three_hundred = pd.concat([two_hundred, one_hundred]).reset_index(drop=True)
 three_hundred.to_csv("data/sampled_tweets/sampled_tweets300_categorized.csv", index=False)

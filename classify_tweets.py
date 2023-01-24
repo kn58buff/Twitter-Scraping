@@ -3,8 +3,8 @@ from sklearn import naive_bayes, dummy, ensemble, neighbors, tree, feature_extra
 import pandas as pd
 import pickle as pp
 
-learn_data = pd.read_csv("data/sampled_tweets/sampled_tweets300_categorized.csv")
-test_data = pd.read_csv("data/sampled_tweets/sampled_tweets_categorized.csv")
+learn_data = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets300_categorized.csv")
+test_data = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets_categorized.csv")
 complete_data = pd.read_csv("data/raw_tweets/target_data.csv")
 
 def test_performance(classifiers, vectorizers, train, test):
