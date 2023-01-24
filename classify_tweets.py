@@ -3,7 +3,7 @@ from sklearn import naive_bayes, dummy, ensemble, neighbors, tree, feature_extra
 import pandas as pd
 import pickle as pp
 
-learn_data = pd.read_csv("data/sampled_tweets/sampled_tweets200_categorized.csv")
+learn_data = pd.read_csv("data/sampled_tweets/sampled_tweets300_categorized.csv")
 test_data = pd.read_csv("data/sampled_tweets/sampled_tweets_categorized.csv")
 complete_data = pd.read_csv("data/raw_tweets/target_data.csv")
 
@@ -34,8 +34,10 @@ vectorizers = [
     feature_extraction.text.HashingVectorizer()
 ]
 
-#test_performance(classifiers, vectorizers, learn_data, test_data)
+#ratings = test_performance(classifiers, vectorizers, learn_data, test_data)
+#print(ratings)
 
+"""
 classifiers_to_test = [ensemble.BaggingClassifier(), calibration.CalibratedClassifierCV(), linear_model.PassiveAggressiveClassifier()]
 vecs_to_test = [feature_extraction.text.CountVectorizer(), feature_extraction.text.TfidfVectorizer(),
                 feature_extraction.text.HashingVectorizer()]
@@ -71,20 +73,24 @@ for k in range(len(classifiers_to_test)):
             for row in csv_arr:
                 writer.writerow(row)
     pp.dump(current_classifier, open(f"data/model_training/200_samples/{current_classifier}.pickle", "wb"))
-    pp.dump(vectorize_text, open(f"data/model_training/200_samples/{current_vectorizer}.pickle", "wb"))
+    pp.dump(current_vectorizer, open(f"data/model_training/200_samples/{current_vectorizer}.pickle", "wb"))
     print(f"Finished scoring {current_classifier} and {current_vectorizer}")
 
 """
-Function to categorize a tweet using a vectorizer and classifier
+loaded_vec = pp.load(open("data/model_training/200_samples/TfidfVectorizer().pickle", 'rb'))
+loaded_classifier = pp.load(open("data/model_training/200_samples/CalibratedClassifierCV().pickle", 'rb'))
+
+# Function to categorize a tweet using a vectorizer and classifier
 def predict(message, vectorizer, classifier):
     vectorize_message = vectorizer.transform([message])
     predict = classifier.predict(vectorize_message)[0]
     return predict
-"""
 
-"""Categorize all tweets of the data set
+# Categorize all tweets of the data set
 preds_arr = []
 for msg in complete_data.Text:
-    res = predict(msg, current_vectorizer, current_classifier)
+    res = predict(msg, loaded_vec, loaded_classifier)
     preds_arr.append([msg, res])
-"""
+
+prediction_df = pd.DataFrame(preds_arr, columns=["Text", "Category"])
+prediction_df.to_csv("data/predictions/preds_with_best.csv", index=False)

@@ -1,10 +1,10 @@
 #,Text,Answer,Prediction,Result
 0,"CS @ Amb_A_Mohammed presents letter of credence to Mr. Bilak Asif, Kenya's New Honorary Consul in Jakarta, Indonesia.",UNRELATED,UNRELATED,correct
-1,#UNCTAD14 President CS @AMB_A_Mohammed holds bilateral with  Czech Republic delegation to #UNCTAD14 Nairobi,RECEIVE,RECEIVE,correct
+1,#UNCTAD14 President CS @AMB_A_Mohammed holds bilateral with  Czech Republic delegation to #UNCTAD14 Nairobi,RECEIVE,UNRELATED,incorrect
 2,"Japan, China battle for influence good for Kenya - Amina",UNRELATED,UNRELATED,correct
 3,"@twittinibra: Otieno in Egypt, Wafula in Ireland...",UNRELATED,UNRELATED,correct
 4,"Kenya, Nigeria bilateral trade relations is the way to go
-The Nigerian delegation that visited Kenya last week...",RECEIVE,UNRELATED,incorrect
+The Nigerian delegation that visited Kenya last week...",UNRELATED,UNRELATED,correct
 5,"Kenya, Uganda Agree on Joint Ministerial Commission
 Kenya and have agreed to establish a Joint Ministerial...",UNRELATED,UNRELATED,correct
 6,"CS @AMB_A_Mohammed: With PS Monica Juma at Jomo Kenyatta International Airport, Nairobi, receiving Ugandan President H.E. Yoweri Kaguta Museveni on arrival for one-day official visit.",RECEIVE,RECEIVE,correct
@@ -23,7 +23,7 @@ Kenya and have agreed to establish a Joint Ministerial...",UNRELATED,UNRELATED,c
 19,"Political &amp;Diplomatic Secretary, Amb. Tom Amollo held a meeting with H.E Dr. Mohammed A. Khayat, Ambassador of the Kingdom of Saudi Arabia to Kenya, who paid a courtesy call on him.They discussed bilateral issues between the two countries.",UNRELATED,UNRELATED,correct
 20,Kenya Ambassador to Japan Amb.Solomon Maina at the dinner hosted for the visiting Japanese business delegation,RECEIVE,UNRELATED,incorrect
 21,Hon @AbabuNamwamba and Ambassador Trott underscored the importance of continued partnership between the Intergovernmental Authority on Development  (IGAD) and UK in support of the South Sudan Peace Process,UNRELATED,UNRELATED,correct
-22,"CAS Hon @AbabuNamwamba  held bilateral talks with Terens- Nikolai's Quick, Deputy Foreign Minister of Greece. They discussed a range of issues varying from investment promotion activities, increased multilateral collaboration and support for the Big 4 Agenda.",AWAY,AWAY,correct
+22,"CAS Hon @AbabuNamwamba  held bilateral talks with Terens- Nikolai's Quick, Deputy Foreign Minister of Greece. They discussed a range of issues varying from investment promotion activities, increased multilateral collaboration and support for the Big 4 Agenda.",AWAY,UNRELATED,incorrect
 23,"The A3 refers to the bloc of the three (3) African members of the UN Security Council, where Niger, Kenya and Tunisia are its current members, with the plus 1 incorporating the additional member of the Caribbean region, presently Saint Vincent and the Grenadines.",UNRELATED,UNRELATED,correct
 24,"PS @AmbMKamau participated in the #UN Oceans Advisory Committee meeting held at the Permanent Mission of Portugal to the UN, New York. The meeting deliberated on reinvigorating the preparatory process of Oceans Conference scheduled for June 2022 in  Portugal. Kenya will co-host",AWAY,UNRELATED,incorrect
 25,President Kenyatta received by Equatorial Guinea President Teodoro Nguema Mbasogo at Malabo International Airport.,AWAY,AWAY,correct
@@ -31,7 +31,7 @@ Kenya and have agreed to establish a Joint Ministerial...",UNRELATED,UNRELATED,c
 27,"CS Amb Raychelle Omamo officially inaugurated the Kenya High Commission Chancery Building in Maputo. The inauguration officially marks the establishment of the Kenya High Commission in Mozambique, an important step in the deepening of the ties between the two countries.",AWAY,UNRELATED,incorrect
 28,"CS @AMB_A_Mohammed: Held talks with Vicky Pantazopoulou-Honorary Consul,consulate of Kenya in Athens,Greece. Present was Amb  @amolosango",AWAY,UNRELATED,incorrect
 29,"CS @AMB_A_Mohammed and PS Monica Juma, welcoming H.E. Workneh Gebeyehu, Ethiopia Foreign Minister who is on a 2-day official visit to Kenya",RECEIVE,RECEIVE,correct
-30,"CAS @AbabuNamwamba consults with his Sudanese counterpart H.E Omer Gamareldien, State Minister for Foreign Affairs of the Republic of Sudan, and Ethiopia's Workneh Gebeyehu Negewo, the Executive Secretary of IGAD, at the EU-IGAD Ministerial consultative meeting in Khartoum today.",AWAY,AWAY,correct
+30,"CAS @AbabuNamwamba consults with his Sudanese counterpart H.E Omer Gamareldien, State Minister for Foreign Affairs of the Republic of Sudan, and Ethiopia's Workneh Gebeyehu Negewo, the Executive Secretary of IGAD, at the EU-IGAD Ministerial consultative meeting in Khartoum today.",AWAY,UNRELATED,incorrect
 31,@rsezibera: The agenda is to consider report by  eminent persons and report of AGs on the issue of Burundi,UNRELATED,UNRELATED,correct
 32,"1/2 CS Amb. Raychelle Omamo arrived at the Khalid Int'l Airport Saudi Arabia today. She was received by the Chief of Protocol, Ministry of Foreign Affairs, Kenya's Ambassador to Saudi Arabia Amb. Peter N. R. O. Ogego and Ambassador of Saudi Arabia to Kenya Amb. Khalid Al-Salmani",AWAY,UNRELATED,incorrect
 33,"CS @AMB_A_Mohammed: Mr. Katsuyuki Kawai, Special Advisor to Japanese PM, addresses the Press Conference on TICAD VI",UNRELATED,UNRELATED,correct
@@ -44,13 +44,13 @@ Kenya and have agreed to establish a Joint Ministerial...",UNRELATED,UNRELATED,c
 40,CS @AMB_A_Mohammed: Kenya is one of South Africa's leading trade partners in Africa &amp; a major recipient of its FDI,UNRELATED,UNRELATED,correct
 41,"CS @AMB_A_Mohammed with Kenya Permanent Representative to UN in New York Amb Macharia Kamau in Windhoek, Namibia.",AWAY,UNRELATED,incorrect
 42,"CAS @AbabuNamwamba visited the Sports Center of the Football Association of Serbia, among the most modern facilities in Europe. It offers top level training camps in football, handball, volleyball, basketball and martial arts.",AWAY,UNRELATED,incorrect
-43,"PS @AmbMKamau  together with Amb. Joshua Mugodo, met with Bernard Quintin, Chef de Cabinet of the Vice Minister for Foreign Affairs, Belgium and the Deputy DG for Multilateral Affairs, Werner Bauwens.",AWAY,AWAY,correct
+43,"PS @AmbMKamau  together with Amb. Joshua Mugodo, met with Bernard Quintin, Chef de Cabinet of the Vice Minister for Foreign Affairs, Belgium and the Deputy DG for Multilateral Affairs, Werner Bauwens.",AWAY,UNRELATED,incorrect
 44,"The Young Diplomats Exchange Programme for  fifteen (15) Chinese young diplomats commenced on 29th October, 2018,at the Foreign Service Academy (FSA) of Kenya, and will end on  2nd Nov, 2018. The Kenyan team of young diplomats will leave for the return programme in China in 2019.",UNRELATED,UNRELATED,correct
 45,"Chief Administrative Secretary, Hon Ababu Namwamba, will this evening be the Chief Guest at the 54th Tanzania Union Day cocktail reception at Kenyatta International Convention Centre (KICC) at 6.30pm. Media is welcome to attend and provide coverage. @AbabuNamwamba @Kiptoock",UNRELATED,UNRELATED,correct
 46,CS @AMB_A_Mohammed: H.E @UKenyatta addresses Kenyan students undergoing training in agriculture in Israel,UNRELATED,UNRELATED,correct
 47,PDS Amb Tom Amolo today at farewell luncheon for H.E Kwame Asamoah Tankorang High Commissioner of Ghana to Kenya at DusitD2 Hotel Nairobi,UNRELATED,UNRELATED,correct
 48,"CS @AMB_A_Mohammed: Kenya/Sudan can cooperate in energy, tourism, infrastructure, sugar, oil &amp;mineral exploitation",UNRELATED,UNRELATED,correct
-49,"""@SirLimo: @AMB_A_Mohammed at JKIA after seeing off China Premier Li, who has been in Kenya for a 3-day state visit.",RECEIVE,RECEIVE,correct
+49,"""@SirLimo: @AMB_A_Mohammed at JKIA after seeing off China Premier Li, who has been in Kenya for a 3-day state visit.",RECEIVE,UNRELATED,incorrect
 50,H.E. Mounir Nour: Egypt &amp; Kenya will establish a joint business council to promote economic ties between them,UNRELATED,UNRELATED,correct
 51,"CS @AMB_A_Mohammed: Dr. Tedros Adhanom, Foreign Minister of Ethiopia  led the Ethiopian delegation to the JMC",UNRELATED,UNRELATED,correct
 52,"CS @AMB_A_Mohammed: These sectors include Trade, Agriculture, Security, Refugees, Immigration, Economic &amp;Political affairs btn Kenya-Somalia",UNRELATED,UNRELATED,correct
@@ -86,7 +86,7 @@ Kenya and have agreed to establish a Joint Ministerial...",UNRELATED,UNRELATED,c
 80,CS @AMB_A_Mohammed when she hosted Japan Special Envoy for UN Affairs Amb. Seichi Kondo in her office.,RECEIVE,RECEIVE,correct
 81,China-Africa Summit to review trade and investment ties ,UNRELATED,UNRELATED,correct
 82,CS @AMB_A_Mohammed: Kenya expresses solidarity with ECOWAS and calls for a speedy and bloodless end to the crisis in the Gambia./1,UNRELATED,UNRELATED,correct
-83,CS @AMB_A_Mohammed: H.E Uhuru Kenyatta will be making an official visit to the Republic of Sudan in early  2016.1/2,AWAY,AWAY,correct
+83,CS @AMB_A_Mohammed: H.E Uhuru Kenyatta will be making an official visit to the Republic of Sudan in early  2016.1/2,AWAY,UNRELATED,incorrect
 84,PS Monica Juma at a luncheon hosted in honor of her visit by Pakistan Foreign Secretary Ms. Terminal Janjua.,AWAY,AWAY,correct
 85,"CS @Amb_A_Mohammed: With Mr. Vinay Kumar, Joint Secretary, India's Ministry of External Affairs",UNRELATED,UNRELATED,correct
 86,CS @AMB_A_Mohammed: Received by Kenya HC to United Kingdom Amb Lazarus Amayo on arrival at Heathrow Airport,AWAY,UNRELATED,incorrect
