@@ -49,7 +49,7 @@ with open("data/countries.csv", "r") as countriesfile:
 countries.remove(["KE", "Kenya"]) # Remove Kenya, only need to find other countries
 #%%
 # Dataset to be used for processing
-# data = pd.read_csv("data\leader_tweets_kenya_clean.csv")
+# data = pd.read_csv("data/raw_tweets/leader_tweets_kenya_clean.csv")
 # data.head()
 #%%
 
