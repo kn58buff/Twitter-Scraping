@@ -56,20 +56,17 @@ def scrape(keywords, start, max_results):
     return list_of_tweets
 
 # Converts a list of tweet details to a pandas DataFrame. By default, exports as a .csv file
-def tweets_to_df(tweets, to_csv = "True"):
+def tweets_to_csv(tweets, filename):
     df = pd.DataFrame(tweets)
-
-    if to_csv == "True":
-        df.to_csv("data/state_dept.csv", index=False)
-        return df
-    elif to_csv == "False":
-        return df
+    df.to_csv(f"data/raw_tweets/{filename}.csv", index=False)
+    print(f"Successfully exported data to {filename}.csv")
+    return None
 
 headers = create_headers()
-keywords = "from: StateDept"
+keywords = "from: StateHouseKenya"
 start = "2006-03-21T00:00:00.000Z"
 max_results = 500
 
 tweets = scrape(keywords, start, max_results)
 #%%
-tweets_to_df(tweets)
+tweets_to_csv(tweets, "raw_president_tweets")
