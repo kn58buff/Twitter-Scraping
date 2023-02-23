@@ -24,9 +24,8 @@ comparison_df = (SUB.Text.isin(SUP.Text).astype(int)).to_frame(name="Matched")
 matches = comparison_df.loc[comparison_df["Matched"] == 1]
 print(len(matches))
 
-"""
+
 merged_df = pd.merge(left=SUP, right=SUB, how="left")
-merged_df.to_csv("check.csv", index=False)
-SUP.to_csv("SUP.csv", index=False)
-SUB.to_csv("SUB.csv", index=False)
-"""
+merged_df.to_csv("data/validation/check.csv", index=False)
+SUP.to_csv("data/validation/SUP.csv", index=False)
+SUB.to_csv("data/validation/SUB.csv", index=False)
