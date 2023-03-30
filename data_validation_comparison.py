@@ -15,8 +15,8 @@ else:
     print(f"The two models do not have the same size.\nCC_TFIDF has size {len(CC_TFIDF)}\nCLF_SVM has size {len(CLF_SVM)}")
 
 # Extract tweets from both dataframes, where categories are either AWAY or RECEIVE
-SUP = CC_TFIDF.loc[CC_TFIDF["Category"] != "UNRELATED"].reset_index()
-SUB = CLF_SVM.loc[CLF_SVM["Category"] != "UNRELATED"].reset_index()
+SUP = CC_TFIDF.loc[CC_TFIDF["Category"] != "UNRELATED"].reset_index(drop = True)
+SUB = CLF_SVM.loc[CLF_SVM["Category"] != "UNRELATED"].reset_index(drop = True)
 print(f"Size of bigger set (CC_TFIDF): {len(SUP)}\nSize of smaller set (CLF_SVM): {len(SUB)}")
 
 # Check if tweets in SUB are part of SUP
