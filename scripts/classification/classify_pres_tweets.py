@@ -31,7 +31,7 @@ def clean_data(data):
 
 def filter_data(data):
     countries = []
-    with open("data/countries.csv", "r") as countriesfile:
+    with open("../../data/countries.csv", "r") as countriesfile:
         reader = csv.reader(countriesfile)
         next(reader)
         for row in reader:
@@ -56,7 +56,7 @@ def filter_data(data):
 
     return target_dataset
 
-raw_pres_tweets = pd.read_csv("data/raw_tweets/raw_president_tweets.csv")
+raw_pres_tweets = pd.read_csv("../../data/raw_tweets/raw_president_tweets.csv")
 clean_pres_tweets = clean_data(raw_pres_tweets)
 filtered_tweets = filter_data(clean_pres_tweets)
 
@@ -65,8 +65,8 @@ filtered_tweets = filter_data(clean_pres_tweets)
 #filtered_tweets.to_csv("data/raw_tweets/filtered_president_tweets.csv")
 
 # Load vectorizer and classifier
-loaded_vec = pp.load(open("data/model_training/200_samples/TfidfVectorizer().pickle", 'rb'))
-loaded_classifier = pp.load(open("data/model_training/200_samples/CalibratedClassifierCV().pickle", 'rb'))
+loaded_vec = pp.load(open("../../data/model_training/200_samples/TfidfVectorizer().pickle", 'rb'))
+loaded_classifier = pp.load(open("../../data/model_training/200_samples/CalibratedClassifierCV().pickle", 'rb'))
 
 preds_arr = []
 for msg in filtered_tweets.Text:

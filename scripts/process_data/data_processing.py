@@ -12,7 +12,7 @@ pd.set_option('display.max_colwidth', None)
 
 # Read in tweets and look at first 5 rows
 # Step 1 - clean raw data
-data = pd.read_csv("data/raw_tweets/leader_tweets_kenya.csv")
+data = pd.read_csv("../../data/raw_tweets/leader_tweets_kenya.csv")
 data.head()
 
 # Remove any tweets that are retweets
@@ -33,7 +33,7 @@ data.loc[:, "Text"] = no_links
 
 # Save cleaned data to new csv file
 #data.to_csv("data/raw_tweets/leader_tweets_kenya_clean.csv", index=False)
-new_data = pd.read_csv("data/raw_tweets/leader_tweets_kenya_clean.csv")
+new_data = pd.read_csv("../../data/raw_tweets/leader_tweets_kenya_clean.csv")
 
 print(f"STEP 1 : Successfully cleaned raw data and exported to new csv file.\n")
 print(f"--- STEP 2 beginning ---")
@@ -41,7 +41,7 @@ print(f"--- STEP 2 beginning ---")
 # Step 2 - find only tweets that mention a country
 # Read in a file of all countries
 countries = []
-with open("data/countries.csv", "r") as countriesfile:
+with open("../../data/countries.csv", "r") as countriesfile:
     reader = csv.reader(countriesfile)
     next(reader)
     for row in reader:
@@ -82,7 +82,7 @@ target_dataset = pd.DataFrame(target_tweets, columns=["Date", "Text"])
 #%%
 
 # Uncomment to reload data
-data = pd.read_csv("data/raw_tweets/target_data.csv")
+data = pd.read_csv("../../data/raw_tweets/target_data.csv")
 data = data.reset_index()
 
 #%%
@@ -116,8 +116,8 @@ def sample_unique(main_data, sampled_data, n):
 #print(f"STEP 3 : Sampled a new 100 tweets")
 
 # Concatenate two samples
-two_hundred = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets200_categorized.csv")
-one_hundred = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets100_categorized.csv")
+two_hundred = pd.read_csv("../../data/sampled_tweets/categorized/sampled_tweets200_categorized.csv")
+one_hundred = pd.read_csv("../../data/sampled_tweets/categorized/sampled_tweets100_categorized.csv")
 
 three_hundred = pd.concat([two_hundred, one_hundred]).reset_index(drop=True)
 three_hundred.to_csv("data/sampled_tweets/sampled_tweets300_categorized.csv", index=False)

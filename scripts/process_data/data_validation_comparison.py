@@ -2,10 +2,10 @@ import pandas as pd
 
 # Would like to compare the results of the two models
 # CC_TFIDF is the classifier_vectorizer combination
-CC_TFIDF = pd.read_csv("data/predictions/preds_with_best.csv")
+CC_TFIDF = pd.read_csv("../../data/predictions/preds_with_best.csv")
 
 # CLF_SVM is the SVM (support vector machine) results
-CLF_SVM = pd.read_csv("data/predictions/preds_with_clfsvm.csv")
+CLF_SVM = pd.read_csv("../../data/predictions/preds_with_clfsvm.csv")
 CLF_SVM.drop(columns=["index", "Date"], inplace=True)
 
 # Check if both models have same size

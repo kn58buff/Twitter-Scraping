@@ -3,9 +3,9 @@ from sklearn import naive_bayes, dummy, ensemble, neighbors, tree, feature_extra
 import pandas as pd
 import pickle as pp
 
-learn_data = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets300_categorized.csv")
-test_data = pd.read_csv("data/sampled_tweets/categorized/sampled_tweets_categorized.csv")
-complete_data = pd.read_csv("data/raw_tweets/target_data.csv")
+learn_data = pd.read_csv("../../data/sampled_tweets/categorized/sampled_tweets300_categorized.csv")
+test_data = pd.read_csv("../../data/sampled_tweets/categorized/sampled_tweets_categorized.csv")
+complete_data = pd.read_csv("../../data/raw_tweets/target_data.csv")
 
 def test_performance(classifiers, vectorizers, train, test):
     ratings = {}
@@ -77,8 +77,8 @@ for k in range(len(classifiers_to_test)):
     print(f"Finished scoring {current_classifier} and {current_vectorizer}")
 
 """
-loaded_vec = pp.load(open("data/model_training/200_samples/TfidfVectorizer().pickle", 'rb'))
-loaded_classifier = pp.load(open("data/model_training/200_samples/CalibratedClassifierCV().pickle", 'rb'))
+loaded_vec = pp.load(open("../../data/model_training/200_samples/TfidfVectorizer().pickle", 'rb'))
+loaded_classifier = pp.load(open("../../data/model_training/200_samples/CalibratedClassifierCV().pickle", 'rb'))
 
 # Function to categorize a tweet using a vectorizer and classifier
 def predict(message, vectorizer, classifier):
